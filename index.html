@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Productivity Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <!-- Import Bootstrap CSS Below -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <!--BEGINNING OF NAV BAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand">
+        <p class="title">Welcome to your ToolBox!</p>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" target="_blank" href="contact.html">Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              More Tools
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item red" href="math.html">Math Tools</a></li>
+              <li><a class="dropdown-item" href="science.html">Science Tools</a></li>
+              <li><a class="dropdown-item" href="english.html">English Tools</a></li>
+              <li><a class="dropdown-item" href="cs.html">Computer Science Tools</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="miscellaneous.html">Miscellaneous Tools</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!--END OF NAV BAR-->
+  <!--BEGINNING OF ACCORDIAN FOR MORE TOOLS-->
+  <div class="accordion accordion-flush" id="accordionFlushExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingOne">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+          Timer
+        </button>
+      </h2>
+      <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
+        <div class="accordion-body">
+          <div class="container">
+            <!--TIMER-->
+            <h1 id="timertitle">
+              Timer
+            </h1>
+            <p class="population" style="text-align:center;">Set timer for </p>
+            <div id="typeHere">
+              <div style="text-align:center;">
+                <input placeholder="0" class="inputBox" id="setTime" type="text" style="border: none; font-size: 16px; 
+            font-weight: bold; color: black;">
+              </div>
+              <p style="text-align:center;" class="population"> minutes.</p>
+              <p><br></br>Time Left:</p>
+              <div class="container">
+
+
+
+
+                <div style="text-align:center;">
+                  <input disabled placeholder="0" class="inputBox" id="minutes" type="text" style="
+             border: none; font-size: 16px; 
+            font-weight: bold; color: black;">
+                </div>
+                <div style="text-align:center;">minutes<br></br></div>
+
+
+
+                <div style="text-align:center;">
+                  <input disabled class="inputBox" placeholder="0" id="seconds" type="text" style="border: none; font-size: 16px;
+                        font-weight: bold; color: black;">
+                </div>
+                <div style="text-align:center;">seconds</div>
+
+
+              </div>
+            </div>
+            <div id="banner">
+              <div class="container">
+                <div class="row timerButtons">
+
+                  <div style="text-align:center;" class="buttons1 col">
+                    <div style="text-align:right;" class="buttons1 col">
+                      <button onclick="startTimer();">start</button>
+                    </div>
+                  </div>
+                  <div style="text-align:center;" class="buttons1 col">
+                    <div style="text-align:left;" class="buttons1 col">
+                      <button onclick="resetTimer();">reset</button>
+                    </div>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+          Your To-do List
+        </button>
+      </h2>
+      <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo">
+        <div class="accordion-body">
+          <div id="myDIV" class="header">
+
+
+            <!--TO DO LIST-->
+            <h1>To-Do:</h1>
+            <input type="text" id="tdlInput" placeholder="Title...">
+            <span onclick="newElement()" class="addBtn">Add</span>
+          </div>
+
+
+        </div>
+        <ul id="myUL">
+        </ul>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="flush-headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+          data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+          Your Calendar
+        </button>
+      </h2>
+      <div style="text-align: center;"id="flush-collapseThree" class="accordion-collapse collapse responsiveCal" aria-labelledby="flush-headingThree">
+        <div class="accordion-body"><iframe
+            src="https://calendar.google.com/calendar/embed?src=da9iab3f1votsspk5adm9u3blo%40group.calendar.google.com&ctz=America%2FNew_York"
+            style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+        </div>
+      </div>
+    </div>
+  </div></div>
+    <!--END OF THE ACCORDIAN-->
+    <div class="divider"><br></br></div>
+    
+      <div class="container">
+        <div class="row align-items-center">
+          <ul style="background-color: rgba(229,229,229, 0.3)"class="pagination-lg">
+            <div class="col tools">
+              <li class="page-item toolItems"><a target="_blank" class="page-link" href="math.html">Math Tools</a></li>
+            </div>
+            <br></br>
+            <div class="col">
+              <li class="page-item toolItems"><a target="_blank" class="page-link" href="science.html">Science Tools</a>
+              </li>
+            </div>
+            <br></br>
+            <div class="col">
+              <li class="page-item toolItems"><a target="_blank" class="page-link" href="english.html">English Tools</a>
+              </li>
+            </div>
+            <br></br>
+            <div class="col">
+              <li class="page-item toolItems"><a target="_blank" class="page-link" href="cs.html">Computer Science
+                  Tools</a></li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

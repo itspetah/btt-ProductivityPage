@@ -1,0 +1,136 @@
+.navbar-brand{
+  color: #abe;
+}
+ .accordion-button.collapsed{
+  color: #BC8F8F;
+}
+
+body {
+  background-color: #62bdc0;
+}
+
+.title{
+  color:green;
+}
+.inputBox {
+  text-align: center;
+  width:auto;
+  height: 40px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+/*
+  use this to change background colors of accordion body
+*/
+.accordion-body{
+  background-color: skyblue;
+}
+
+button{
+  margin-top: 30px; 
+  border-radius: 20px;
+}
+.timerButtons{
+  margin-top: 30px; 
+}
+
+.container{
+  color: #4682B4
+}
+.page-item{
+  list-style-type: none;
+}
+/*CSS for to do list
+***********************/
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+li.tdlLi {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #b8e7ff;
+  font-size: 18px;
+  transition: 0.2s;
+  
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+li.checked.tdlLi {
+  background: #1c6c94;
+  color: white;
+  text-decoration: line-through;
+}
+li.tdlLi:hover {
+  background: #7ad3ff;
+}
+.close {
+  margin-top:auto;
+  margin-bottom:auto;
+  position:absolute;
+  right: 0;
+  top: 0;
+  padding: 2px 8px 2px 8px;
+  border-radius: 10px;
+}
+.close:hover{
+  background-color: red;
+  color: white;
+}
+/***************/
+body{
+  color: skyblue;
+}
+.pagination-lg{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: skyblue;
+  border-radius: 10px;
+}
+body{
+  background-image: url("background.jpg");
+}
+
+li {
+  text-align: center;
+}
+
+.card-text{
+  background-color: skyblue;
+}
+
+
+a.page-link{
+  background-color: #4169E1 ;
+  /* text color */
+  color:white;
+}
+
+/* styling when hovering over */
+a.page-link:hover{
+  background-color: skyblue;
+  color: black;
+}
+
+
+button.accordion-button.collapsed{
+  background-color: #B0C4DE;
+  color: white
+}
+
+.title{
+  color: darkblue;
+}
+
+.card {
+  display:grid;
+  background-color: #f8f8f1;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  text-align: left;
+}
